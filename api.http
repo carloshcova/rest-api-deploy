@@ -1,0 +1,47 @@
+# ### recupera todos os pokemons
+# GET http://localhost:1234/pokemon/ditto
+
+# ### Para crear un pokemon
+# POST http://localhost:1234/pokemon
+# Content-Type: application/json
+
+# {
+#   "name": "ditto",
+#   "type": "normal",
+#   "moves": ["transform"]
+# }
+
+### Recuperar todas las películas
+GET http://localhost:1234/movies
+
+### Recuperar una película por id
+GET http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+
+### Recuperar todas las películas por género
+GET http://localhost:1234/movies?genre=action
+
+### Crear una película
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Carlangas Pepelepua",
+  "year": 2008,
+  "director": "Carlos Humberto",
+  "duration": 152,
+  "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+  "genre": [
+    "Action",
+    "Crime",
+    "Drama"
+  ],
+  "rate": 9
+}
+
+### Actualizar una película
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "title": "lucrecia"
+}
